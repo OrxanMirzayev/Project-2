@@ -1,0 +1,363 @@
+// Mixin
+
+@mixin oswald-light() {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin oswald-bold() {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin comfortaa-light() {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+// ----------------------------------------------------------------
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @include oswald-light();
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 36px;
+  color: #fff;
+}
+
+h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background: #fff;
+  margin: 10px auto;
+}
+
+p {
+  @include comfortaa-light();
+  color: #fff;
+}
+
+.customParagraph {
+  font-size: 18px;
+  font-style: italic;
+  width: 80%;
+  margin: 15px auto 60px auto;
+}
+
+.alignLeft {
+  float: left;
+}
+
+.alignRight {
+  float: right;
+}
+
+// ----------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+#mainArea {
+  background-image: url("../img/City.jpg");
+  background-color: #fdb674;
+
+  // #E3806B
+
+  // background-color: rgb(250, 104, 0);
+  background-blend-mode: multiply;
+
+  // background-image: linear-gradient(#ee5a36e5, #ee5a36e5),
+  //   url("../img/City.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 35px;
+
+  .nav {
+    margin-top: 60px;
+  }
+
+  .nav li {
+    display: inline-block;
+  }
+
+  .nav li a {
+    color: #fff;
+    text-decoration: none;
+    @include oswald-bold();
+    font-size: 16px;
+    margin-left: 30px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav li a:hover {
+    border-bottom: 1px solid #fff;
+  }
+  #navbar-mobile-menu {
+    display: none;
+  }
+}
+
+.mainContent {
+  margin-top: 202px;
+  display: inline-block;
+  text-align: center;
+
+  h1 {
+    font-size: 72px;
+    color: #f1c40f;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+  }
+
+  .mainSlogan {
+    margin: 0 auto;
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .arrow {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #f1c40f;
+    border-radius: 100%;
+    margin: 160px auto 120px auto;
+
+    i {
+      color: #fff;
+      line-height: 55px;
+    }
+  }
+}
+
+// Features ----------------------------------------------------------------
+
+#features {
+  background: #f1c40f;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  .container {
+    text-align: center;
+  }
+
+  .features-content {
+    display: inline-block;
+    .col-4 {
+      width: 33.33%;
+      float: left;
+      padding: 0 20px;
+
+      .circle {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-position: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Portfolio ----------------------------------------------------------------
+
+#portfolio {
+  background: #95a5a6;
+  padding-top: 90px;
+  padding-bottom: 80px;
+
+  .container {
+    text-align: center;
+  }
+
+  .portfolio-content {
+    display: inline-block;
+    .col-4_ {
+      width: 33.33%;
+      float: left;
+      padding: 0 20px;
+      margin-bottom: 40px;
+
+      .item {
+        // width: 340px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        .circlePlus {
+          margin: 0 auto;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        .overlay img {
+          width: 15%;
+        }
+      }
+      .item:hover .overlay {
+        top: 0;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($color: #e74c3c, $alpha: 0.8);
+        padding-top: 40px;
+        transition: top 0.4s;
+
+        .paraName {
+          font-size: 18px;
+          @include oswald-light();
+        }
+      }
+
+      .overlay {
+        top: 100%;
+      }
+    }
+
+    .overlay {
+      .paraName {
+        text-transform: uppercase;
+      }
+    }
+
+    .circlePlus {
+      width: 55px;
+      height: 55px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+
+      i {
+        color: #fff;
+        line-height: 49px;
+      }
+    }
+  }
+}
+
+// Team ----------------------------------------------------------------
+
+#team {
+  background-color: #2ecc71;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  .container {
+    text-align: center;
+  }
+
+  .team-content {
+    .col-4 {
+      width: 33.33%;
+      float: left;
+      padding: 0 80px;
+      margin-bottom: 40px;
+    }
+
+    display: inline-block;
+    .profileImg {
+      max-width: 180px;
+      max-height: 180px;
+      border-radius: 100%;
+      border: 4px solid #fff;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .projileIcons {
+      color: #fff;
+
+      i {
+        margin-left: 7px;
+        margin-right: 7px;
+      }
+    }
+  }
+}
+
+// Contact ----------------------------------------------------------------
+
+#contact {
+  background-color: #34495e;
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  .container {
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 50%;
+    margin: 0 auto;
+
+    input,
+    textarea {
+      width: 100%;
+      height: 40px;
+      padding: 5px;
+      margin-bottom: 20px;
+      outline: none;
+      border: none;
+    }
+    textarea {
+      height: 160px;
+    }
+
+    input[type="submit"] {
+      background-color: #e74c3c;
+      color: #fff;
+      margin-top: 20px;
+      font-size: 20px;
+      @include oswald-light();
+      letter-spacing: 3px;
+      cursor: pointer;
+    }
+  }
+}

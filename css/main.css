@@ -1,0 +1,240 @@
+html {
+  scroll-behavior: smooth; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 36px;
+  color: #fff; }
+
+h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 15px; }
+
+h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background: #fff;
+  margin: 10px auto; }
+
+p {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff; }
+
+.customParagraph {
+  font-size: 18px;
+  font-style: italic;
+  width: 80%;
+  margin: 15px auto 60px auto; }
+
+.alignLeft {
+  float: left; }
+
+.alignRight {
+  float: right; }
+
+* {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+#mainArea {
+  background-image: url("../img/City.jpg");
+  background-color: #fdb674;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 35px; }
+  #mainArea .nav {
+    margin-top: 60px; }
+  #mainArea .nav li {
+    display: inline-block; }
+  #mainArea .nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 30px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out; }
+  #mainArea .nav li a:hover {
+    border-bottom: 1px solid #fff; }
+  #mainArea #navbar-mobile-menu {
+    display: none; }
+
+.mainContent {
+  margin-top: 202px;
+  display: inline-block;
+  text-align: center; }
+  .mainContent h1 {
+    font-size: 72px;
+    color: #f1c40f;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 40px; }
+  .mainContent .mainSlogan {
+    margin: 0 auto;
+    width: 85%;
+    font-size: 18px; }
+  .mainContent .arrow {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #f1c40f;
+    border-radius: 100%;
+    margin: 160px auto 120px auto; }
+    .mainContent .arrow i {
+      color: #fff;
+      line-height: 55px; }
+
+#features {
+  background: #f1c40f;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  #features .container {
+    text-align: center; }
+  #features .features-content {
+    display: inline-block; }
+    #features .features-content .col-4 {
+      width: 33.33%;
+      float: left;
+      padding: 0 20px; }
+      #features .features-content .col-4 .circle {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-position: center; }
+        #features .features-content .col-4 .circle img {
+          width: 100%;
+          height: 100%; }
+      #features .features-content .col-4 p {
+        font-size: 14px; }
+
+#portfolio {
+  background: #95a5a6;
+  padding-top: 90px;
+  padding-bottom: 80px; }
+  #portfolio .container {
+    text-align: center; }
+  #portfolio .portfolio-content {
+    display: inline-block; }
+    #portfolio .portfolio-content .col-4_ {
+      width: 33.33%;
+      float: left;
+      padding: 0 20px;
+      margin-bottom: 40px; }
+      #portfolio .portfolio-content .col-4_ .item {
+        margin: auto;
+        position: relative;
+        overflow: hidden; }
+        #portfolio .portfolio-content .col-4_ .item .circlePlus {
+          margin: 0 auto; }
+        #portfolio .portfolio-content .col-4_ .item img {
+          width: 100%; }
+        #portfolio .portfolio-content .col-4_ .item .overlay img {
+          width: 15%; }
+      #portfolio .portfolio-content .col-4_ .item:hover .overlay {
+        top: 0; }
+      #portfolio .portfolio-content .col-4_ .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(231, 76, 60, 0.8);
+        padding-top: 40px;
+        transition: top 0.4s; }
+        #portfolio .portfolio-content .col-4_ .overlay .paraName {
+          font-size: 18px;
+          font-family: "Oswald", sans-serif;
+          font-weight: 300;
+          font-style: normal; }
+      #portfolio .portfolio-content .col-4_ .overlay {
+        top: 100%; }
+    #portfolio .portfolio-content .overlay .paraName {
+      text-transform: uppercase; }
+    #portfolio .portfolio-content .circlePlus {
+      width: 55px;
+      height: 55px;
+      border: 3px solid #fff;
+      border-radius: 50%; }
+      #portfolio .portfolio-content .circlePlus i {
+        color: #fff;
+        line-height: 49px; }
+
+#team {
+  background-color: #2ecc71;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  #team .container {
+    text-align: center; }
+  #team .team-content {
+    display: inline-block; }
+    #team .team-content .col-4 {
+      width: 33.33%;
+      float: left;
+      padding: 0 80px;
+      margin-bottom: 40px; }
+    #team .team-content .profileImg {
+      max-width: 180px;
+      max-height: 180px;
+      border-radius: 100%;
+      border: 4px solid #fff;
+      overflow: hidden; }
+      #team .team-content .profileImg img {
+        width: 100%; }
+    #team .team-content .projileIcons {
+      color: #fff; }
+      #team .team-content .projileIcons i {
+        margin-left: 7px;
+        margin-right: 7px; }
+
+#contact {
+  background-color: #34495e;
+  padding-top: 120px;
+  padding-bottom: 100px; }
+  #contact .container {
+    text-align: center; }
+  #contact .contact-form {
+    width: 50%;
+    margin: 0 auto; }
+    #contact .contact-form input,
+    #contact .contact-form textarea {
+      width: 100%;
+      height: 40px;
+      padding: 5px;
+      margin-bottom: 20px;
+      outline: none;
+      border: none; }
+    #contact .contact-form textarea {
+      height: 160px; }
+    #contact .contact-form input[type="submit"] {
+      background-color: #e74c3c;
+      color: #fff;
+      margin-top: 20px;
+      font-size: 20px;
+      font-family: "Oswald", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 3px;
+      cursor: pointer; }
